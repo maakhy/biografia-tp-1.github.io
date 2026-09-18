@@ -1,0 +1,269 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    border-bottom: 1px solid #eeeeee;
+}
+
+nav button {
+    border: none;
+    background: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #222222;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    color: #777777;
+}
+
+
+/* =========================
+   PORTADA
+========================= */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.portada {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 20px;
+}
+
+.foto-container {
+    display: inline-block;
+    padding: 8px;
+    border: 2px solid #222222;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.portada img {
+    display: block;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+}
+
+.portada h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.portada p {
+    font-size: 1.2rem;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton-principal {
+    padding: 13px 25px;
+    border: 1px solid #222222;
+    background-color: #222222;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+main {
+    width: 100%;
+}
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+section p {
+    font-size: 1.05rem;
+    max-width: 750px;
+}
+
+
+/* =========================
+   PROYECTOS
+========================= */
+
+#proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+#proyectos h2 {
+    width: 100%;
+}
+
+#proyectos article {
+    flex: 1 1 300px;
+    padding: 30px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+#proyectos article:hover {
+    transform: translateY(-5px);
+}
+
+#proyectos article h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   LOGROS
+========================= */
+
+#logros ul {
+    list-style: none;
+    max-width: 750px;
+}
+
+#logros li {
+    padding: 18px;
+    margin-bottom: 10px;
+    border-left: 3px solid #222222;
+    background-color: #f7f7f7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #222222;
+    color: #ffffff;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 3px;
+        padding: 10px 5px;
+    }
+
+    nav button {
+        padding: 8px 6px;
+        font-size: 0.8rem;
+    }
+
+    .portada {
+        padding-top: 80px;
+    }
+
+    .portada img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .portada h1 {
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+
+    .portada p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+}
